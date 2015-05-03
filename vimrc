@@ -36,8 +36,11 @@ endfunction
 
 function! TmuxShell()
 	if !exists("g:TmuxPaneIndex")
-		call system("tmux split-window -p 20 -v")
-		let g:TmuxPaneIndex = _TmuxPaneIndex()
+		call system("tmux split-window -p 30 -v")
+		let g:TmuxPaneIndex = [_TmuxPaneIndex()]
+	else
+		call system("tmux split-window -p 50 -h -t ". g:TmuxPaneIndex[0])
+		call add(g:TmuxPaneIndex, _TmuxPaneIndex())
 	endif
 endfunction
 "Redéfinition de la commande builtin "shell" par défault à TmuxShell
@@ -46,7 +49,9 @@ cabbrev shell TmuxShell
 "Lorsque l'on quitte vim, on tue le pane shell ouvert, s'il existe
 function! TmuxKillShell()
 	if exists("g:TmuxPaneIndex")
-		call system("tmux kill-pane -t ".g:TmuxPaneIndex)
+		for i in g:TmuxPaneIndex
+			call system("tmux kill-pane -t ".i)
+		endfor
 	endif
 endfunction
 autocmd VimLeave * call TmuxKillShell()
