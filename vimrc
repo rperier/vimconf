@@ -27,3 +27,12 @@ map <C-n>     :nohlsearch<CR>	"On utilise Ctrl-n pour désactiver le hlsearch
 map <C-right> :bnext<CR>	"On utilise Ctrl-right pour aller au buffer suivant
 map <C-left>  :bprevious<CR>	"On utilise Ctrl-left pour aller au buffer précèdent
 
+" Définition d'une fonction pour ouvrir un shell via tmux
+command TmuxShell :call TmuxShell()
+
+function! TmuxShell(...)
+	call system("tmux split-window -p 20 -v")
+endfunction
+"Redéfinition de la commande builtin "shell" par défault à TmuxShell
+cabbrev shell TmuxShell
+
