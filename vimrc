@@ -27,12 +27,27 @@ map <C-n>     :nohlsearch<CR>	"On utilise Ctrl-n pour désactiver le hlsearch
 map <C-right> :bnext<CR>	"On utilise Ctrl-right pour aller au buffer suivant
 map <C-left>  :bprevious<CR>	"On utilise Ctrl-left pour aller au buffer précèdent
 
-" Définition d'une fonction pour ouvrir un shell via tmux
+" Définition d'une commande pour ouvrir un shell via tmux
 command TmuxShell :call TmuxShell()
 
-function! TmuxShell(...)
-	call system("tmux split-window -p 20 -v")
+function! _TmuxPaneIndex()
+	return system("tmux display -p '#I.#P'")
+endfunction
+
+function! TmuxShell()
+	if !exists("g:TmuxPaneIndex")
+		call system("tmux split-window -p 20 -v")
+		let g:TmuxPaneIndex = _TmuxPaneIndex()
+	endif
 endfunction
 "Redéfinition de la commande builtin "shell" par défault à TmuxShell
 cabbrev shell TmuxShell
+
+"Lorsque l'on quitte vim, on tue le pane shell ouvert, s'il existe
+function! TmuxKillShell()
+	if exists("g:TmuxPaneIndex")
+		call system("tmux kill-pane -t ".g:TmuxPaneIndex)
+	endif
+endfunction
+autocmd VimLeave * call TmuxKillShell()
 
