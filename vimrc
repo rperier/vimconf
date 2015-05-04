@@ -26,6 +26,7 @@ map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
 map <C-n>     :nohlsearch<CR>	"On utilise Ctrl-n pour désactiver le hlsearch
 map <C-right> :bnext<CR>	"On utilise Ctrl-right pour aller au buffer suivant
 map <C-left>  :bprevious<CR>	"On utilise Ctrl-left pour aller au buffer précèdent
+nnoremap K :Man <cword><CR>	"On utilise Shift-k pour lancer man sur le mot sous le curseur
 
 " Définition d'une commande pour ouvrir un shell via tmux
 command TmuxShell :call TmuxShell()
