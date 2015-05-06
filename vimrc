@@ -16,7 +16,7 @@ call pathogen#infect()		"Initialisation de pathogen
 call pathogen#helptags()
 
 " Options pour les plugins vim
-let g:ycm_autoclose_preview_window_after_completion=1	"On ferme la fenêtre de preview dans YCM après avoir accepté la proposition
+let g:ycm_autoclose_preview_window_after_insertion = 1	"On ferme la fenêtre de preview dans YCM après avoir quitté l'insertion
 
 " Mapping de raccourcis
 map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
