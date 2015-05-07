@@ -1,0 +1,12 @@
+[submodule "bundle/ag"]
+	path = bundle/ag
+	url = https://github.com/rking/ag.vim.git
+[submodule "bundle/bitbake"]
+	path = bundle/bitbake
+	url = https://github.com/kergoth/vim-bitbake.git
+[submodule "bundle/PKGBUILD"]
+	path = bundle/PKGBUILD
+	url = https://github.com/Firef0x/PKGBUILD.vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
