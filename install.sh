@@ -4,6 +4,7 @@ test -d $HOME/.vim/autoload || mkdir $HOME/.vim/autoload
 ln -sf $HOME/.vim/pathogen/autoload/pathogen.vim $HOME/.vim/autoload/pathogen.vim
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 ln -sf $HOME/.vim/tmux.conf $HOME/.tmux.conf
+git submodule update --init --recursive
 
 echo "Remember to put TERM=xterm-256color in your ~/.bashrc"
 
