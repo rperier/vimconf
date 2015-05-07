@@ -16,7 +16,18 @@ call pathogen#infect()		"Initialisation de pathogen
 call pathogen#helptags()
 
 " Options pour les plugins vim
-let g:ycm_autoclose_preview_window_after_insertion = 1	"On ferme la fenêtre de preview dans YCM après avoir quitté l'insertion
+
+"" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 1
+let g:syntastic_loc_list_height = 3
+let g:syntastic_c_compiler = $CROSS_COMPILE . 'gcc'
+let g:syntastic_c_compiler_options = $COMPILER_FLAGS.' '.$CFLAGS .' -Wall -Wextra -std=gnu99'
 
 " Mapping de raccourcis
 map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
