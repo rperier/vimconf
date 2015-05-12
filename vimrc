@@ -29,6 +29,12 @@ let g:syntastic_loc_list_height = 3
 let g:syntastic_c_compiler = $CROSS_COMPILE . 'gcc'
 let g:syntastic_c_compiler_options = $COMPILER_FLAGS.' '.$CFLAGS .' -Wall -Wextra -std=gnu99'
 
+"" airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "murmur"
+set timeoutlen=30
+
 " Mapping de raccourcis
 map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
 map <C-n>     :nohlsearch<CR>	"On utilise Ctrl-n pour désactiver le hlsearch
