@@ -10,14 +10,14 @@ LIB = -fno-rtti \
     -lclangLex -lclangBasic  -lclangCodeGen -lclangSema \
     -lclangAnalysis  -lclangAST -lclangParse -lclangLex \
     -lclangASTMatchers \
-    -lclangBasic -lLLVMSupport
+    -lclangBasic -lLLVMSupport -lpthread -ldl -lncurses -lz
 
 CXXFLAGS += -Wall -Wextra -O3
 
 all: clang-typeinfo
 
 clang-typeinfo: clang-typeinfo.cpp
-	$(CXX) $< -o $@ $(CXXFLAGS) $(LIB) `llvm-config --cxxflags --ldflags --libs all --system-libs`
+	$(CXX) $< -o $@ $(CXXFLAGS) $(LIB) `llvm-config-3.6 --cxxflags --ldflags --libs all`
 
 clean:
 	$(RM) clang-typeinfo

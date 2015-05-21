@@ -34,6 +34,10 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = "murmur"
 set timeoutlen=30
 
+"" typeinfo
+"let g:typeinfo_debug = 1
+let g:airline#extensions#typeinfo#enabled = 1
+
 " Mapping de raccourcis
 map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
 map <C-n>     :nohlsearch<CR>	"On utilise Ctrl-n pour désactiver le hlsearch
