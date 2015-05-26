@@ -1,0 +1,15 @@
+-isystem /usr/lib/clang/3.6.1/include
+-I/home/ubuntu/linux-tree/arch/x86/include
+-I/home/ubuntu/linux-tree/arch/x86/include/generated/uapi
+-I/home/ubuntu/linux-tree/arch/x86/include/generated
+-I/home/ubuntu/linux-tree/include
+-I/home/ubuntu/linux-tree/arch/x86/include/uapi
+-I/home/ubuntu/linux-tree/include/uapi
+-I/home/ubuntu/linux-tree/include/generated/uapi
+-include /home/ubuntu/linux-tree/include/linux/kconfig.h
+-std=gnu89 -m64
+-D__KERNEL__
+-DCC_USING_FENTRY
+-D"KBUILD_STR(s)=#s"
+-D"KBUILD_BASENAME=KBUILD_STR(missing_syscalls)"
+-D"KBUILD_MODNAME=KBUILD_STR(missing_syscalls)"
