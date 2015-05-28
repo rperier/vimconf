@@ -20,7 +20,7 @@ using namespace llvm;
 
 static const char* FunctionID = "function-id";
 
-static cl::OptionCategory ClangTypeInfoCategory("clang-typeinfo options");
+static cl::OptionCategory ClangTypeInfoCategory("clang-showme options");
 static cl::opt<bool> Debug("debug",
     cl::desc("enable debugging mode"),
     cl::cat(ClangTypeInfoCategory)
@@ -111,7 +111,7 @@ private:
 static std::unique_ptr<opt::OptTable> Options(clang::driver::createDriverOptTable());
 static cl::extrahelp CommonHelp(clang::tooling::CommonOptionsParser::HelpMessage);
 static cl::extrahelp MoreHelp(
-    "\nclang-typeinfo will find declarations of functions or variables"
+    "\nclang-showme will find declarations of functions or variables"
     "\nspecified on the command line, and display their locations to the standard output.\n");
 static cl::opt<std::string> Function("function",
     cl::desc("function name to find"),

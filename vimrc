@@ -34,9 +34,9 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = "murmur"
 set timeoutlen=30
 
-"" typeinfo
-"let g:typeinfo_debug = 1
-let g:airline#extensions#typeinfo#enabled = 1
+"" showme
+"let g:showme_debug = 1
+let g:airline#extensions#showme#enabled = 1
 
 " Mapping de raccourcis
 map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
