@@ -59,16 +59,17 @@ function! ShowMeFunc()
 		return
 	endif
 
-	normal b
 	let currentline = getline('.')
 	let pos = getpos('.')
-	let index = pos[2] - 2
+	let index = pos[2] - 1
+	while index > 0 && currentline[index] != ' ' && currentline[index] != '\t'
+		let index -= 1
+	endwhile
 	while index > 0 && (currentline[index] == ' ' || currentline[index] == '\t')
 		call showme#log#debug('col[' . (index) . '] = ' . currentline[index])
 		let index -= 1
 	endwhile
 	call setpos('.', pos)
-	normal e
 	if index > 0
 		call showme#log#debug('function definition, ignoring')
 		return
