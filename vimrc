@@ -38,6 +38,9 @@ set timeoutlen=30
 "let g:showme_debug = 1
 let g:airline#extensions#showme#enabled = 1
 
+"" bufferline
+let g:bufferline_echo = 0
+
 " Mapping de raccourcis
 map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
 map <C-n>     :nohlsearch<CR>	"On utilise Ctrl-n pour désactiver le hlsearch
