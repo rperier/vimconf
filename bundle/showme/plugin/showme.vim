@@ -54,8 +54,23 @@ endfunction
 function! ShowMeFunc()
 	let cword = expand("<cword>")
 
-	if strlen(cword) == 0 || cword =~ '\(^catch$\|^for$\|^if$\|^main$\|^sizeof$\|^switch$\|^while$\)'
-		call showme#log#debug("excluding cword: ". expand("<cword>"))
+	if cword !~ '\<[A-Z_a-z0-9]\+\>' || cword =~ '\(^catch$\|^for$\|^if$\|^main$\|^sizeof$\|^switch$\|^while$\)'
+		call showme#log#debug("excluding invalid cword: ". expand("<cword>"))
+		return
+	endif
+
+	normal b
+	let currentline = getline('.')
+	let pos = getpos('.')
+	let index = pos[2] - 2
+	while index > 0 && (currentline[index] == ' ' || currentline[index] == '\t')
+		call showme#log#debug('col[' . (index) . '] = ' . currentline[index])
+		let index -= 1
+	endwhile
+	call setpos('.', pos)
+	normal e
+	if index > 0
+		call showme#log#debug('function definition, ignoring')
 		return
 	endif
 
