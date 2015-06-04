@@ -9,6 +9,7 @@ colorscheme lapis256 			"activer le colorschme lapis256
 syntax on				"activer la colorisation syntaxique
 set listchars=tab:▸\ ,trail:␣,nbsp:¤	"Pour afficher les tabulations en début de ligne ou les espaces en fin de ligne
 set autowriteall 			"Pour automatiquement sauvegarder les buffers modifiés lorsqu'on change de buffer
+set pastetoggle=<F2>			"Pour activer/desactiver le mode paste afin de ne pas casser l'indentation à cause de autoindent
 
 " Activation/initialisations de plugins
 runtime! ftplugin/man.vim 	"Activation du plugin Man (:Man 2 printf)
