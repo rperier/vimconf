@@ -76,5 +76,11 @@ function! TmuxKillShell()
 		endfor
 	endif
 endfunction
-autocmd VimLeave * call TmuxKillShell()
 
+function! RunAsyncCommand(cmdline)
+	below new
+	resize 20
+	call conque_term#open(a:cmdline)
+endfunction
+
+autocmd VimLeave * call TmuxKillShell()
