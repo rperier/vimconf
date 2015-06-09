@@ -1,1 +1,16 @@
-au BufNewFile,BufRead *.bb map <C-Up> :call RunAsyncCommand('bitbake ' . substitute(expand('%:t'), '_.*.bb', '', ''))<CR>
+function! Bitbake(recipe, ...)
+	if !a:0
+		if exists("g:bitbake_default_task")
+			let default_task = "-c " . g:bitbake_default_task . " "
+		else
+			let default_task = " "
+		endif
+		let cmdline = "bitbake " . default_task . a:recipe
+	else
+		let cmdline = "bitbake -c " . a:1 . " " . a:recipe
+	endif
+	call RunAsyncCommand(cmdline)
+endfunction
+
+au BufNewFile,BufRead *.bb map <C-Up> :call Bitbake(substitute(expand('%:t'), '_.*.bb', '', ''))<CR>
+command! -nargs=* Bitbake call Bitbake(<f-args>)
