@@ -42,6 +42,10 @@ let g:airline#extensions#showme#enabled = 1
 "" bufferline
 let g:bufferline_echo = 0
 
+"" conque
+let g:ConqueTerm_TERM = 'xterm'
+let g:ConqueTerm_Color = 1
+
 " Mapping de raccourcis
 map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
 map <C-n>     :nohlsearch<CR>	"On utilise Ctrl-n pour désactiver le hlsearch
