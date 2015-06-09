@@ -13,11 +13,12 @@ LIB = -fno-rtti \
     -lclangBasic -lLLVMSupport -lpthread -ldl -lncurses -lz
 
 CXXFLAGS += -Wall -Wextra -O3
+LLVMCONFIG ?= llvm-config
 
 all: clang-showme
 
 clang-showme: clang-showme.cpp
-	$(CXX) $< -o $@ $(CXXFLAGS) $(LIB) `llvm-config --cxxflags --ldflags --libs all`
+	$(CXX) $< -o $@ $(CXXFLAGS) $(LIB) `$(LLVMCONFIG) --cxxflags --ldflags --libs all`
 
 clean:
 	$(RM) clang-showme
