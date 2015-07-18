@@ -7,6 +7,6 @@ ln -sf $HOME/.vim/tmux.conf $HOME/.tmux.conf
 git submodule update --init --recursive
 
 echo "Remaining tasks:"
-echo " * export TERM=xterm-256color in your ~/.bashrc"
+echo " * export TERM=screen-256color in your ~/.bashrc"
 echo " * install powerline fonts (https://github.com/powerline/fonts.git)"
 
