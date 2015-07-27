@@ -10,6 +10,8 @@ syntax on				"activer la colorisation syntaxique
 set listchars=tab:▸\ ,trail:␣,nbsp:¤	"Pour afficher les tabulations en début de ligne ou les espaces en fin de ligne
 set autowriteall 			"Pour automatiquement sauvegarder les buffers modifiés lorsqu'on change de buffer
 set pastetoggle=<F2>			"Pour activer/desactiver le mode paste afin de ne pas casser l'indentation à cause de autoindent
+set lazyredraw				"On postpone la plupart des redraw que lorsque c'est explicitement necessaire (réduit la charge graphique)
+set ttyfast				"Indique qu'il s'agit d'un terminal rapide, plus de caractères sont envoyés lors du redraw, ça améliore le smoothing
 
 " Activation/initialisations de plugins
 runtime! ftplugin/man.vim 	"Activation du plugin Man (:Man 2 printf)
