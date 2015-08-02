@@ -12,6 +12,7 @@ set autowriteall 			"Pour automatiquement sauvegarder les buffers modifiés lors
 set pastetoggle=<F2>			"Pour activer/desactiver le mode paste afin de ne pas casser l'indentation à cause de autoindent
 set lazyredraw				"On postpone la plupart des redraw que lorsque c'est explicitement necessaire (réduit la charge graphique)
 set ttyfast				"Indique qu'il s'agit d'un terminal rapide, plus de caractères sont envoyés lors du redraw, ça améliore le smoothing
+let mapleader = ','			"On définie le prefix key ou leader à ','
 
 " Activation/initialisations de plugins
 runtime! ftplugin/man.vim 	"Activation du plugin Man (:Man 2 printf)
