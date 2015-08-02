@@ -12,6 +12,6 @@ function! Bitbake(recipe, ...)
 	call RunAsyncCommand(cmdline)
 endfunction
 
-au BufNewFile,BufRead *.{bb,bbappend,bbclass} map <C-Up> :call Bitbake(substitute(expand('%:t'), '_.*.bb*', '', ''))<CR>
+au BufNewFile,BufRead *.{bb,bbappend,bbclass} map <Leader>b :call Bitbake(substitute(expand('%:t'), '_.*.bb*', '', ''))<CR>
 au BufNewFile,BufRead *.{bb,bbappend,bbclass} command! -nargs=* Bitbake call Bitbake(<f-args>)
 
