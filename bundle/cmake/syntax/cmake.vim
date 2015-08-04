@@ -30,6 +30,8 @@ syn region cmakeRegistry start=/\[/ end=/]/
             \ contained oneline contains=CONTAINED,cmakeTodo,cmakeEscaped
 syn region cmakeVariableValue start=/\${/ end=/}/
             \ contained oneline contains=CONTAINED,cmakeTodo
+syn region cmakeTargetObjects start=/\$</ end=/>/
+            \ contained oneline contains=CONTAINED,cmakeTodo
 syn region cmakeEnvironment start=/\$ENV{/ end=/}/
             \ contained oneline contains=CONTAINED,cmakeTodo
 syn region cmakeString start=/"/ end=/"/
@@ -45,6 +47,7 @@ syn keyword cmakeOperators
             \ STRGREATER STREQUAL VERSION_LESS VERSION_EQUAL VERSION_GREATER
             \ DEFINED AND OR
             \ contained
+            \ DEPENDS
 syn keyword cmakeTodo
             \ TODO FIXME XXX
             \ contained
@@ -175,6 +178,7 @@ hi def link cmakeLuaComment      Comment
 hi def link cmakeString          String
 hi def link cmakeSystemVariables Define
 hi def link cmakeVariableValue   Special
+hi def link cmakeTargetObjects   Special
 hi def link cmakeRegistry        Underlined
 hi def link cmakeArguments       Identifier
 hi def link cmakeEnvironment     Special
