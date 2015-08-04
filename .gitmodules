@@ -1,27 +1,36 @@
 [submodule "bundle/ag"]
 	path = bundle/ag
 	url = https://github.com/rking/ag.vim.git
+	ignore = dirty
 [submodule "bundle/bitbake"]
 	path = bundle/bitbake
 	url = https://github.com/kergoth/vim-bitbake.git
+	ignore = dirty
 [submodule "bundle/PKGBUILD"]
 	path = bundle/PKGBUILD
 	url = https://github.com/Firef0x/PKGBUILD.vim.git
+	ignore = dirty
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+	ignore = dirty
 [submodule "bundle/airline"]
 	path = bundle/airline
 	url = https://github.com/bling/vim-airline.git
+	ignore = dirty
 [submodule "bundle/tmuxline"]
 	path = bundle/tmuxline
 	url = https://github.com/edkolev/tmuxline.vim.git
+	ignore = dirty
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+	ignore = dirty
 [submodule "bundle/bufferline"]
 	path = bundle/bufferline
 	url = https://github.com/bling/vim-bufferline.git
+	ignore = dirty
 [submodule "bundle/ConqueGDB"]
 	path = bundle/ConqueGDB
 	url = https://github.com/vim-scripts/Conque-GDB.git
+	ignore = dirty
