@@ -4,6 +4,7 @@ test -d $HOME/.vim/autoload || mkdir $HOME/.vim/autoload
 ln -sf $HOME/.vim/pathogen/autoload/pathogen.vim $HOME/.vim/autoload/pathogen.vim
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 ln -sf $HOME/.vim/tmux.conf $HOME/.tmux.conf
+ln -sf $HOME/.vim/screenrc $HOME/.screenrc
 git submodule update --init --recursive
 
 echo "Remaining tasks:"
