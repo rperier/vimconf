@@ -34,3 +34,8 @@
 	path = bundle/ConqueGDB
 	url = https://github.com/vim-scripts/Conque-GDB.git
 	ignore = dirty
+[submodule "bundle/fugitive"]
+	path = bundle/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+	ignore = dirty
+
