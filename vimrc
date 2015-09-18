@@ -1,6 +1,26 @@
 set nocompatible			" be iMproved, required
 filetype off
 
+set rtp+=~/.vim/bundle/vundle
+call vundle#begin()
+Bundle 'gmarik/vundle'
+Bundle 'vim-scripts/Conque-GDB'
+Bundle 'Firef0x/PKGBUILD.vim'
+Bundle 'rking/ag.vim'
+Bundle 'bling/vim-airline'
+Bundle 'kergoth/vim-bitbake'
+Bundle 'bling/vim-bufferline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'edkolev/tmuxline.vim'
+Plugin 'cmake', {'pinned': 1}
+Plugin 'xtermkeys', {'pinned': 1}
+Plugin 'showme', {'pinned': 1}
+call vundle#end()
+filetype plugin indent on
+
+" Options standard de vim
 set autoindent  			"activer l'indentation automatique,recopie l'indentation de la ligne précèdente
 set t_Co=256				"activer le mode 256 couleurs
 set t_ut=				"désactiver le BCE pour faire marcher le color scheme dans tmux (http://snk.tuxfamily.org/log/vim-256color-bce.html)
@@ -18,23 +38,6 @@ let mapleader = ','			"On définie le prefix key ou leader à ','
 " Activation/initialisations de plugins
 runtime! ftplugin/man.vim 	"Activation du plugin Man (:Man 2 printf)
 
-set runtimepath+=~/.vim/bundle/vundle
-call vundle#begin()
-Bundle 'gmarik/vundle'
-Bundle 'vim-scripts/Conque-GDB'
-Bundle 'Firef0x/PKGBUILD.vim'
-Bundle 'rking/ag.vim'
-Bundle 'bling/vim-airline'
-Bundle 'kergoth/vim-bitbake'
-Bundle 'bling/vim-bufferline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'msanders/snipmate.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'edkolev/tmuxline.vim'
-Plugin 'cmake', {'pinned': 1}
-Plugin 'xtermkeys', {'pinned': 1}
-Plugin 'showme', {'pinned': 1}
-call vundle#end()
 
 " Options pour les plugins vim
 let g:airline_powerline_fonts = 1
