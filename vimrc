@@ -33,6 +33,7 @@ set pastetoggle=<F2>			"Pour activer/desactiver le mode paste afin de ne pas cas
 set lazyredraw				"On postpone la plupart des redraw que lorsque c'est explicitement necessaire (réduit la charge graphique)
 set ttyfast				"Indique qu'il s'agit d'un terminal rapide, plus de caractères sont envoyés lors du redraw, ça améliore le smoothing
 set laststatus=2			"Toujours afficher la barre de status (pour airline)
+set previewheight=24			"Hauteur de la preview window que l'on double (12 par défaut)
 let mapleader = ','			"On définie le prefix key ou leader à ','
 
 " Activation/initialisations de plugins
