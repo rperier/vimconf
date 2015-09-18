@@ -12,28 +12,31 @@ set autowriteall 			"Pour automatiquement sauvegarder les buffers modifiés lors
 set pastetoggle=<F2>			"Pour activer/desactiver le mode paste afin de ne pas casser l'indentation à cause de autoindent
 set lazyredraw				"On postpone la plupart des redraw que lorsque c'est explicitement necessaire (réduit la charge graphique)
 set ttyfast				"Indique qu'il s'agit d'un terminal rapide, plus de caractères sont envoyés lors du redraw, ça améliore le smoothing
+set laststatus=2			"Toujours afficher la barre de status (pour airline)
 let mapleader = ','			"On définie le prefix key ou leader à ','
 
 " Activation/initialisations de plugins
 runtime! ftplugin/man.vim 	"Activation du plugin Man (:Man 2 printf)
-call pathogen#infect()		"Initialisation de pathogen
-call pathogen#helptags()
+
+set runtimepath+=~/.vim/bundle/vundle
+call vundle#begin()
+Bundle 'gmarik/vundle'
+Bundle 'vim-scripts/Conque-GDB'
+Bundle 'Firef0x/PKGBUILD.vim'
+Bundle 'rking/ag.vim'
+Bundle 'bling/vim-airline'
+Bundle 'kergoth/vim-bitbake'
+Bundle 'bling/vim-bufferline'
+Bundle 'tpope/vim-fugitive'
+Bundle 'msanders/snipmate.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'edkolev/tmuxline.vim'
+Plugin 'cmake', {'pinned': 1}
+Plugin 'xtermkeys', {'pinned': 1}
+Plugin 'showme', {'pinned': 1}
+call vundle#end()
 
 " Options pour les plugins vim
-
-"" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 1
-let g:syntastic_loc_list_height = 3
-let g:syntastic_c_compiler = $CROSS_COMPILE . 'gcc'
-let g:syntastic_c_compiler_options = $COMPILER_FLAGS.' '.$CFLAGS .' -Wall -Wextra -std=gnu99'
-
-"" airline
-set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "murmur"
 set timeoutlen=30

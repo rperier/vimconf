@@ -1,4 +1,4 @@
 autoload/*
 powerline*/
-bundle/*/doc/tags
+bundle/**
 

@@ -1,11 +1,10 @@
 #!/bin/sh
 
-test -d $HOME/.vim/autoload || mkdir $HOME/.vim/autoload
-ln -sf $HOME/.vim/pathogen/autoload/pathogen.vim $HOME/.vim/autoload/pathogen.vim
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc
 ln -sf $HOME/.vim/tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/.vim/screenrc $HOME/.screenrc
-git submodule update --init --recursive
+vim +BundleInstall +qall
 
 echo "Remaining tasks:"
 echo " * export TERM=screen-256color in your ~/.bashrc"
