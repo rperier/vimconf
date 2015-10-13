@@ -14,6 +14,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'edkolev/tmuxline.vim'
+Bundle 'kien/ctrlp.vim'
 Plugin 'cmake', {'pinned': 1}
 Plugin 'xtermkeys', {'pinned': 1}
 Plugin 'showme', {'pinned': 1}
