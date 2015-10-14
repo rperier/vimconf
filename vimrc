@@ -71,3 +71,10 @@ function! RunAsyncCommand(cmdline)
 	call conque_term#open(a:cmdline)
 endfunction
 
+function! OpenTodo()
+	let l:path = findfile("TODO.txt", ".;")
+	execute 'pedit' l:path
+	wincmd p
+endfunction
+
+command! Todo call OpenTodo()
