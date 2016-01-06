@@ -47,6 +47,7 @@ runtime! ftplugin/man.vim 	"Activation du plugin Man (:Man 2 printf)
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "murmur"
 set timeoutlen=30
+let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 
 "" showme
 "let g:showme_debug = 1
