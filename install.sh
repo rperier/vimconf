@@ -9,5 +9,7 @@ ln -sf $HOME/.vim/vimrc $HOME/.config/nvim/init.vim
 vim +BundleInstall +qall
 
 echo "Remaining tasks:"
+echo " * install terminator with vte3 support (for true colors)"
+echo " * install tmux-git with Tc support"
 echo " * install powerline fonts (https://github.com/powerline/fonts.git)"
 
