@@ -10,7 +10,6 @@ Bundle 'freeo/vim-kalisi'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'kergoth/vim-bitbake'
-Bundle 'bling/vim-bufferline'
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
@@ -50,6 +49,7 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = "kalisi"
 set timeoutlen=30
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
+let g:airline#extensions#tabline#enabled = 1
 
 "" showme
 "let g:showme_debug = 1
