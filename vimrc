@@ -47,6 +47,7 @@ runtime! ftplugin/man.vim 	"Activation du plugin Man (:Man 2 printf)
 " Options pour les plugins vim
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "kalisi"
+let g:airline#extensions#tmuxline#enabled = 0
 set timeoutlen=30
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline#extensions#tabline#enabled = 1
