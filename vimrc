@@ -56,9 +56,6 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:showme_debug = 1
 let g:airline#extensions#showme#enabled = 1
 
-"" bufferline
-let g:bufferline_echo = 0
-
 "" conque
 let g:ConqueTerm_TERM = 'xterm'
 let g:ConqueTerm_Color = 1
