@@ -1,27 +1,23 @@
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#begin()
-Bundle 'gmarik/vundle'
-Bundle 'vim-scripts/Conque-GDB'
-Bundle 'Firef0x/PKGBUILD.vim'
-Bundle 'freeo/vim-kalisi'
-Bundle 'vim-airline/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
-Bundle 'kergoth/vim-bitbake'
-Bundle 'gregsexton/gitv'
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'msanders/snipmate.vim'
-Bundle 'edkolev/tmuxline.vim'
-Bundle 'kassio/neoterm'
-Bundle 'junegunn/fzf'
-Bundle 'junegunn/fzf.vim'
-Bundle 'rking/ag.vim'
-Plugin 'cmake', {'pinned': 1}
-Plugin 'xtermkeys', {'pinned': 1}
-Plugin 'showme', {'pinned': 1}
-call vundle#end()
+call plug#begin('~/.vim/bundle')
+Plug 'vim-scripts/Conque-GDB'
+Plug 'Firef0x/PKGBUILD.vim'
+Plug 'freeo/vim-kalisi'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'kergoth/vim-bitbake'
+Plug 'gregsexton/gitv'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'msanders/snipmate.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'kassio/neoterm'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'rking/ag.vim'
+Plug 'rperier/vim-cmake-syntax'
+call plug#end()
 filetype plugin indent on
 
 " Options standard de vim
