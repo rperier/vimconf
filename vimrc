@@ -5,7 +5,6 @@ call vundle#begin()
 Bundle 'gmarik/vundle'
 Bundle 'vim-scripts/Conque-GDB'
 Bundle 'Firef0x/PKGBUILD.vim'
-Bundle 'rking/ag.vim'
 Bundle 'freeo/vim-kalisi'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
@@ -16,7 +15,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'msanders/snipmate.vim'
 Bundle 'edkolev/tmuxline.vim'
 Bundle 'kassio/neoterm'
-Bundle 'kien/ctrlp.vim'
+Bundle 'junegunn/fzf'
+Bundle 'junegunn/fzf.vim'
+Bundle 'rking/ag.vim'
 Plugin 'cmake', {'pinned': 1}
 Plugin 'xtermkeys', {'pinned': 1}
 Plugin 'showme', {'pinned': 1}
