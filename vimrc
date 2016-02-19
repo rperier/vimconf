@@ -15,6 +15,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'msanders/snipmate.vim'
 Bundle 'edkolev/tmuxline.vim'
+Bundle 'kassio/neoterm'
 Bundle 'kien/ctrlp.vim'
 Plugin 'cmake', {'pinned': 1}
 Plugin 'xtermkeys', {'pinned': 1}
@@ -45,6 +46,8 @@ runtime! ftplugin/man.vim 	"Activation du plugin Man (:Man 2 printf)
 
 
 " Options pour les plugins vim
+
+"" airline
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "kalisi"
 let g:airline#extensions#tmuxline#enabled = 0
@@ -60,6 +63,9 @@ let g:airline#extensions#showme#enabled = 1
 let g:ConqueTerm_TERM = 'xterm'
 let g:ConqueTerm_Color = 1
 
+"" neoterm
+let g:neoterm_size = 20
+
 " Mapping de raccourcis
 map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
 map <C-n>     :nohlsearch<CR>	"On utilise Ctrl-n pour désactiver le hlsearch
@@ -69,9 +75,7 @@ nnoremap K :Man <cword><CR>	"On utilise Shift-k pour lancer man sur le mot sous 
 
 " Code custom
 function! RunAsyncCommand(cmdline)
-	below new
-	resize 20
-	call termopen(a:cmdline)
+	call neoterm#do(a:cmdline)
 endfunction
 
 function! OpenTodo()
