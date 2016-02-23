@@ -51,6 +51,7 @@ let g:airline#extensions#tmuxline#enabled = 0
 set timeoutlen=30
 let g:airline#extensions#whitespace#checks = [ 'trailing' ]
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#hunks#non_zero_only = 1
 
 "" showme
 "let g:showme_debug = 1
