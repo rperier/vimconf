@@ -1,0 +1,82 @@
+# Free Electrons
+alias me Romain Perier <romain.perier@free-electrons.com>
+alias thomas Thomas Petazzoni <thomas.petazzoni@free-electrons.com>
+alias boris Boris Brezillon <boris.brezillon@free-electrons.com>
+alias greg Gregory Clement <gregory.clement@free-electrons.com>
+alias max Maxime Ripard <maxime.ripard@free-electrons.com>
+alias antoine Antoine Tenart <antoine.tenart@free-electrons.com>
+alias mylene Mylène Josserand <mylene.josserand@free-electrons.com>
+alias ezequiel Ezequiel Garcia <ezequiel.garcia@free-electrons.com>
+
+# Marvell
+alias lior Lior Amsalem <alior@marvell.com>
+alias marvell Nadav Haklai <nadavh@marvell.com>, Lior Amsalem <alior@marvell.com>
+alias neta Neta Zur Hershkovits <neta@marvell.com>
+alias maen Maen Suleiman <maen@marvell.com>
+alias oferh Ofer Heifetz <oferh@marvell.com>
+alias dima Dmitri Epshtein <dima@marvell.com>
+alias nadav Nadav Haklai <nadavh@marvell.com>
+alias yehuda Yehuda Yitschak <yehuday@marvell.com>
+
+# People
+alias gregkh Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+alias arnd Arnd Bergmann <arnd@arndb.de>
+alias olof Olof Johansson <olof@lixom.net>
+alias jason Jason Cooper <jason@lakedaemon.net>
+alias andrew Andrew Lunn <andrew@lunn.ch>
+alias sebastian Sebastian Hesselbarth <sebastian.hesselbarth@gmail.com>
+alias rob Rob Herring <robh+dt@kernel.org>
+alias stephen Stephen Warren <swarren@wwwdotorg.org>
+alias gleixner Thomas Gleixner <tglx@linutronix.de>
+alias davem David S. Miller <davem@davemloft.net>
+alias netdev netdev@vger.kernel.org
+alias picoxcell Jamie Iles <jamie@jamieiles.com>
+alias linusw Linus Walleij <linus.walleij@linaro.org>
+alias russell Russell King <linux@arm.linux.org.uk>
+alias nico Nicolas Pitre <nico@fluxnic.net>
+alias thierry Thierry Reding <thierry.reding@gmail.com>
+alias jasong Jason Gunthorpe <jgunthorpe@obsidianresearch.com>
+alias florian Florian Fainelli <florian@openwrt.org>
+alias shawn Shawn Guo <shawn.guo@linaro.org>
+alias grant Grant Likely <grant.likely@secretlab.ca>
+alias will Will Deacon <will.deacon@arm.com>
+alias catalin Catalin Marinas <catalin.marinas@arm.com>
+alias albin Albin Tonnerre <albin.tonnerre@arm.com>
+alias bjorn Bjorn Helgaas <bhelgaas@google.com>
+alias ben Benjamin Herrenschmidt <benh@kernel.crashing.org>
+alias kevin Kevin Hilman <khilman@linaro.org>
+alias marc Marc Zyngier <marc.zyngier@arm.com>
+alias heiko Heiko Stuebner <heiko@sntech.de>
+alias marek Marek Vasut <marek.vasut@gmail.com>
+alias ingo Ingo Molnar <mingo@kernel.org>
+alias peterz Peter Zijlstra <peterz@infradead.org>
+alias aebalard Arnaud Ebalard <arno@natisbad.org>
+alias y.morin Yann E. Morin <yann.morin.1998@free.fr>
+alias hxu Herbert Xu <herbert@gondor.apana.org.au>
+alias smiller David S. Miller <davem@davemloft.net>
+
+# Mailing lists
+alias buildroot buildroot@buildroot.org
+alias cryptokml	linux-crypto@vger.kernel.org
+alias larchkml linux-arch@vger.kernel.org
+alias larmkml linux-arm-kernel@lists.infradead.org
+alias lkml linux-kernel@vger.kernel.org
+alias nios2ml nios2-dev@lists.rocketboards.org
+alias stable stable@vger.kernel.org
+
+# Maintainer groups
+alias arm-soc Arnd Bergmann <arnd@arndb.de>, Olof Johansson <olof@lixom.net>
+alias mvebu Jason Cooper <jason@lakedaemon.net>, Andrew Lunn <andrew@lunn.ch>, Sebastian Hesselbarth <sebastian.hesselbarth@gmail.com>, Gregory Clement <gregory.clement@free-electrons.com>
+alias dmaengine Vinod Koul <vinod.koul@intel.com>, dmaengine@vger.kernel.org
+alias mtd David Woodhouse <dwmw2@infradead.org>, Brian Norris <computersforpeace@gmail.com>, linux-mtd@lists.infradead.org
+alias ata Tejun Heo <tj@kernel.org>, linux-ide@vger.kernel.org
+alias pci Bjorn Helgaas <bhelgaas@google.com>, linux-pci@vger.kernel.org
+alias clk Michael Turquette <mturquette@baylibre.com>, Stephen Boyd <sboyd@codeaurora.org>, linux-clk@vger.kernel.org
+alias dt devicetree@vger.kernel.org, Rob Herring <robh+dt@kernel.org>, Ian Campbell <ijc+devicetree@hellion.org.uk>, Pawel Moll <pawel.moll@arm.com>, Mark Rutland <mark.rutland@arm.com>, Kumar Gala <galak@codeaurora.org>
+alias irqchip Thomas Gleixner <tglx@linutronix.de>, Jason Cooper <jason@lakedaemon.net>, Marc Zyngier <marc.zyngier@arm.com>, linux-kernel@vger.kernel.org
+alias arm64 Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will.deacon@arm.com>
+alias nios2 Ley Foon Tan <lftan@altera.com>
+alias i2c Wolfram Sang <wsa@the-dreams.de>, linux-i2c@vger.kernel.org
+
+# Marvell
+alias marvell-a8k Nadav Haklai <nadavh@marvell.com>, Omri Itach <omrii@marvell.com>, Shadi Ammouri <shadi@marvell.com>, Yahuda Yitschak <yehuday@marvell.com>, Hanna Hawa <hannah@marvell.com>, Neta Zur Hershkovits <neta@marvell.com>, Igal Liberman <igall@marvell.com>, Marcin Wojtas <mw@semihalf.com>

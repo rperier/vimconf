@@ -6,6 +6,8 @@ ln -sf $HOME/.vim/screenrc $HOME/.screenrc
 ln -sf $HOME/.vim/zshrc $HOME/.zshrc
 ln -sf $HOME/.vim $HOME/.config/nvim
 ln -sf $HOME/.vim/vimrc $HOME/.config/nvim/init.vim
+test -d $HOME/.mutt || mkdir $HOME/.mutt
+install -m 644 mutt-aliases $HOME/.mutt
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PlugInstall
