@@ -76,10 +76,15 @@ function! RunAsyncCommand(cmdline)
 	call neoterm#do(a:cmdline)
 endfunction
 
-function! OpenTodo()
-	let l:path = findfile("TODO.txt", ".;")
-	execute 'pedit' l:path
-	wincmd p
+function! FindTODO()
+	:vimgrep 'TODO' %
+	:copen
 endfunction
 
-command! Todo call OpenTodo()
+function! FindFIXME()
+	:vimgrep 'FIXME' %
+	:copen
+endfunction
+
+command! Todo call FindTODO()
+command! Fixme call FindFIXME()
