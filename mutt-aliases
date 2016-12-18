@@ -77,6 +77,7 @@ alias irqchip Thomas Gleixner <tglx@linutronix.de>, Jason Cooper <jason@lakedaem
 alias arm64 Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will.deacon@arm.com>
 alias nios2 Ley Foon Tan <lftan@altera.com>
 alias i2c Wolfram Sang <wsa@the-dreams.de>, linux-i2c@vger.kernel.org
+alias spi Mark Brown <broonie@kernel.org>, linux-spi@vger.kernel.org
 
 # Marvell
 alias marvell-a8k Nadav Haklai <nadavh@marvell.com>, Omri Itach <omrii@marvell.com>, Shadi Ammouri <shadi@marvell.com>, Yahuda Yitschak <yehuday@marvell.com>, Hanna Hawa <hannah@marvell.com>, Neta Zur Hershkovits <neta@marvell.com>, Igal Liberman <igall@marvell.com>, Marcin Wojtas <mw@semihalf.com>
