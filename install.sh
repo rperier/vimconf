@@ -10,9 +10,11 @@ test -d $HOME/.mutt || mkdir $HOME/.mutt
 ln -sf $HOME/.vim/mutt-aliases $HOME/.mutt/aliases
 test -d $HOME/.config/terminator || mkdir $HOME/.config/terminator
 ln -sf $HOME/.vim/terminator-config $HOME/.config/terminator/config 
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall
+if [ ! -e $HOME/.config/nvim/autoload/plug.vim ]; then
+	curl -fLo $HOME/.config/nvim/autoload/plug.vim --create-dirs \
+		https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	vim +PlugInstall
+fi
 
 echo "Remaining tasks:"
 echo " * install terminator with vte3 support (for true colors)"
