@@ -149,10 +149,5 @@ _project() {
 
 compdef _project project
 
-# Autocompletion for lavabo
-autoload -U +X bashcompinit && bashcompinit
-eval "$(register-python-argcomplete lavabo)"
-
-
-export PATH="$HOME/Dev/bin:$HOME/Dev/lavabo:$PATH"
+export PATH="$HOME/Dev/bin:$PATH"
 
