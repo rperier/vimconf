@@ -14,7 +14,7 @@
 [profiles]
   [[default]]
     cursor_color = "#aaaaaa"
-    font = Ubuntu Mono derivative Powerline 11
+    font = Ubuntu Mono derivative Powerline 12
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
