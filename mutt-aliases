@@ -1,5 +1,4 @@
 # Free Electrons
-alias me Romain Perier <romain.perier@free-electrons.com>
 alias thomas Thomas Petazzoni <thomas.petazzoni@free-electrons.com>
 alias boris Boris Brezillon <boris.brezillon@free-electrons.com>
 alias greg Gregory Clement <gregory.clement@free-electrons.com>
@@ -32,7 +31,9 @@ alias davem David S. Miller <davem@davemloft.net>
 alias netdev netdev@vger.kernel.org
 alias picoxcell Jamie Iles <jamie@jamieiles.com>
 alias linusw Linus Walleij <linus.walleij@linaro.org>
-alias russell Russell King <linux@arm.linux.org.uk>
+alias russell Russell King <linux@armlinux.org.uk>
+alias jose Jose Abreu <Jose.Abreu@synopsys.com>
+alias neil Neil Armstrong <narmstrong@baylibre.com>
 alias nico Nicolas Pitre <nico@fluxnic.net>
 alias thierry Thierry Reding <thierry.reding@gmail.com>
 alias jasong Jason Gunthorpe <jgunthorpe@obsidianresearch.com>
@@ -55,6 +56,12 @@ alias y.morin Yann E. Morin <yann.morin.1998@free.fr>
 alias hxu Herbert Xu <herbert@gondor.apana.org.au>
 alias smiller David S. Miller <davem@davemloft.net>
 
+# Collabora
+alias sjoerd Sjoerd Simons <sjoerd.simons@collabora.co.uk>
+alias me Romain Perier <romain.perier@collabora.com>
+alias peter Peter Senna Tschudin <peter.senna@collabora.co.uk>
+alias daniels Daniel Stone <daniels@collabora.com>
+
 # Mailing lists
 alias buildroot buildroot@buildroot.org
 alias cryptokml	linux-crypto@vger.kernel.org
@@ -63,6 +70,17 @@ alias larmkml linux-arm-kernel@lists.infradead.org
 alias lkml linux-kernel@vger.kernel.org
 alias nios2ml nios2-dev@lists.rocketboards.org
 alias stable stable@vger.kernel.org
+alias uboot u-boot@lists.denx.de
+alias lrkkml linux-rockchip@lists.infradead.org
+alias dmaekml dmaengine@vger.kernel.org
+alias rdmakml linux-rdma@vger.kernel.org
+alias netdev netdev@vger.kernel.org
+alias usbkml linux-usb@vger.kernel.org
+alias scsikml linux-scsi@vger.kernel.org
+alias dri-devel dri-devel@lists.freedesktop.org
+alias mmckml linux-mmc@vger.kernel.org
+alias serialkml linux-serial@vger.kernel.org
+alias wlkml linux-wireless@vger.kernel.org
 
 # Maintainer groups
 alias arm-soc Arnd Bergmann <arnd@arndb.de>, Olof Johansson <olof@lixom.net>
@@ -78,6 +96,23 @@ alias arm64 Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will.deacon@
 alias nios2 Ley Foon Tan <lftan@altera.com>
 alias i2c Wolfram Sang <wsa@the-dreams.de>, linux-i2c@vger.kernel.org
 alias spi Mark Brown <broonie@kernel.org>, linux-spi@vger.kernel.org
+alias uboot-rk Simon Glass <sjg@chromium.org>
+alias linux-rk Heiko Stuebner <heiko@sntech.de>
+alias sound-soc Liam Girdwood <lgirdwood@gmail.com>, Mark Brown <broonie@kernel.org>, Jaroslav Kysela <perex@perex.cz>, Takashi Iwai <tiwai@suse.com>, alsa-devel@alsa-project.org
+alias sound Jaroslav Kysela <perex@perex.cz>, Takashi Iwai <tiwai@suse.com>, alsa-devel@alsa-project.org
+alias dmaengine Vinod Koul <vinod.koul@intel.com>, Dan Williams <dan.j.williams@intel.com>
+alias ioat Dan Williams <dan.j.williams@intel.com>
+alias infiniband Doug Ledford <dledford@redhat.com>, Sean Hefty <sean.hefty@intel.com>, Hal Rosenstock <hal.rosenstock@gmail.com>
+alias scsi James E.J. Bottomley <jejb@linux.vnet.ibm.com>, Martin K. Petersen <martin.petersen@oracle.com>
+alias usbgadget Felipe Balbi <balbi@kernel.org>
+alias usb Greg Kroah-Hartman <gregkh@linuxfoundation.org> 
+alias drmbridge Archit Taneja <architt@codeaurora.org>, David Airlie <airlied@linux.ie>
+alias mmc Ulf Hansson <ulf.hansson@linaro.org>
+alias serial Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+
+# Yocto maintainer groups
+alias yocto-meta-rockchip Romain Perier <romain.perier@collabora.com>, Trevor Woerner <twoerner@gmail.com>
+alias yoctoml yocto@yoctoproject.org
 
 # Marvell
 alias marvell-a8k Nadav Haklai <nadavh@marvell.com>, Omri Itach <omrii@marvell.com>, Shadi Ammouri <shadi@marvell.com>, Yahuda Yitschak <yehuday@marvell.com>, Hanna Hawa <hannah@marvell.com>, Neta Zur Hershkovits <neta@marvell.com>, Igal Liberman <igall@marvell.com>, Marcin Wojtas <mw@semihalf.com>
