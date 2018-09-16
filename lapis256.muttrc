@@ -1,0 +1,42 @@
+###############################################################################
+# Based from the Dracula Theme for Mutt: https://draculatheme.com/
+#
+# @author Romain Perier <romain.perier@gmail.com>
+
+# general ------------ foreground ---- background -----------------------------
+color error		color231	color212
+color indicator		color231	color241
+color markers		color210	default
+color message		default		default
+color normal		color251	color237
+color prompt		default	        default
+color search		color84		default
+color status 		color148	color235
+color tilde		color231	color237           # blank part outside of the body of the mail
+color tree		color141	color237           # arrow for subtree of a discussion
+
+# message index ------ foreground ---- background -----------------------------
+color index		color210	color237 	~D # deleted messages
+color index		color84		color237 	~F # flagged messages
+color index		color117	color237 	~N # new messages
+color index		color212	color237 	~Q # messages which have been replied to
+color index		color215	color237 	~T # tagged messages
+color index		color141	color237	~v # messages part of a collapsed thread
+
+# message headers ---- foreground ---- background -----------------------------
+color hdrdefault	color117	color237
+color header		color231	color237	^Subject:.*
+
+# message body ------- foreground ---- background -----------------------------
+color attachment	color228	default
+color body		color231	color237	[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+               # email addresses
+color body		color220	color237	(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+        # URLs
+color body		color231	default		(^|[[:space:]])\\*[^[:space:]]+\\*([[:space:]]|$) # *bold* text
+color body		color231	default		(^|[[:space:]])_[^[:space:]]+_([[:space:]]|$)     # _underlined_ text
+color body		color231	default		(^|[[:space:]])/[^[:space:]]+/([[:space:]]|$)     # /italic/ text
+color quoted		color245	color237
+color quoted1		color117	default
+color quoted2		color84		default
+color quoted3		color215	default
+color quoted4		color212	default
+color signature		color212	color237
