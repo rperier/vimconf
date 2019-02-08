@@ -24,5 +24,11 @@ set charset = "utf-8"
 bind pager <up> previous-line #scroll inside the message rather than the index
 bind pager <down> next-line
 
+# Sort by date in reverse order (last received on top)
+set sort=reverse-date
+# Alwats gpgsign mails
+set crypt_autosign=yes
+
 source ~/.mutt/lapis256.muttrc
 source ~/.mutt/email-credentials
+source /etc/Muttrc.d/gpg.rc
