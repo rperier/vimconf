@@ -29,6 +29,31 @@ set sort=reverse-date
 # Alwats gpgsign mails
 set crypt_autosign=yes
 
+## Cache
+
+# Cache mail headers locally (so next mail fetching are faster)
+set header_cache = "~/.mutt/cache/headers"
+# Cache mail body locally (so next mail fetching are faster)
+set message_cachedir = "~/.mutt/cache/bodies"
+
+## Side bar
+set sidebar_visible=no
+mailboxes "+PUT_YOUR_LABELS_HERE"
+
+# ctrl-n, ctrl-p to select next, prev folder
+# ctrl-o to open selected folder
+bind index \CP sidebar-prev
+bind index \CN sidebar-next
+bind index \CO sidebar-open
+bind pager \CP sidebar-prev
+bind pager \CN sidebar-next
+bind pager \CO sidebar-open
+
+# s toggles sidebar visibility
+macro index s '<enter-command>toggle sidebar_visible<enter>'
+macro pager s '<enter-command>toggle sidebar_visible<enter>'
+
+
 source ~/.mutt/lapis256.muttrc
 source ~/.mutt/email-credentials
 source /etc/Muttrc.d/gpg.rc
