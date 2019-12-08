@@ -3,7 +3,14 @@
 set -e
 
 ln -sf $HOME/.vim/vimrc $HOME/.vimrc
-ln -sf $HOME/.vim/tmux.conf $HOME/.tmux.conf
+tmux_version=$(dpkg -s tmux | grep '^Version:' | sed 's/^Version: //' | grep -o '^[0-9]')
+if [ $tmux_version -ge 3 ]; then
+	echo "Detected Tmux 3.x or newer"
+	ln -sf $HOME/.vim/tmux3.conf $HOME/.tmux.conf
+else
+	echo "Detected Tmux 2.x"
+	ln -sf $HOME/.vim/tmux.conf $HOME/.tmux.conf
+fi
 ln -sf $HOME/.vim/screenrc $HOME/.screenrc
 ln -sf $HOME/.vim/zshrc $HOME/.zshrc
 ln -sf $HOME/.vim $HOME/.config/nvim
