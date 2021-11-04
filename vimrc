@@ -1,7 +1,6 @@
 filetype off
 
 call plug#begin('~/.vim/bundle')
-Plug 'vim-scripts/Conque-GDB'
 Plug 'Firef0x/PKGBUILD.vim'
 Plug 'freeo/vim-kalisi'
 Plug 'vim-airline/vim-airline'
@@ -17,6 +16,8 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'rking/ag.vim'
 Plug 'rperier/vim-cmake-syntax'
+Plug 'preservim/nerdtree'
+Plug 'autozimu/LanguageClient-neovim', { 'branch' : 'next', 'do' : 'bash install.sh' }
 call plug#end()
 filetype plugin indent on
 
@@ -57,12 +58,15 @@ let g:airline#extensions#hunks#non_zero_only = 1
 "let g:showme_debug = 1
 let g:airline#extensions#showme#enabled = 1
 
-"" conque
-let g:ConqueTerm_TERM = 'xterm'
-let g:ConqueTerm_Color = 1
-
 "" neoterm
 let g:neoterm_size = 20
+
+"" LanguageClient
+let g:LanguageClient_autoStart = 0
+let g:LanguageClient_serverCommands = {
+			\ 'c'   : [ 'clangd', '-j=4', '-completion-style=detailed', '-background-index', '-all-scopes-completion', '--suggest-missing-includes'],
+			\ 'cpp' : [ 'clangd', '-j=4', '-completion-style=detailed', '-background-index', '-all-scopes-completion', '--suggest-missing-includes'],
+			\ }
 
 " Mapping de raccourcis
 map <C-l>     :set list!<CR>	"On utilise Ctrl-l comme toggle du mode listchars
@@ -70,6 +74,10 @@ map <C-n>     :nohlsearch<CR>	"On utilise Ctrl-n pour désactiver le hlsearch
 map <C-right> :bnext<CR>	"On utilise Ctrl-right pour aller au buffer suivant
 map <C-left>  :bprevious<CR>	"On utilise Ctrl-left pour aller au buffer précèdent
 nnoremap K :Man <cword><CR>	"On utilise Shift-k pour lancer man sur le mot sous le curseur
+nnoremap <C-t> :NERDTreeToggle<CR>	"On utilise Ctrl-t pour toggle nerdtree sur la gauche
+nnoremap <C-f> :NERDTreeFind<CR>	"On utilise Ctrl-f pour affichier l'arbo du fichier courant dans nerdtree
+nnoremap <C-f> :NERDTreeFind<CR>	"On utilise Ctrl-f pour affichier l'arbo du fichier courant dans nerdtree
+nnoremap <C-e> :LanguageClientStart<CR>	"On utilise Ctrl-e pour Activer LanguageClient
 
 " Code custom
 function! RunAsyncCommand(cmdline)
