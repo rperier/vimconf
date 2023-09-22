@@ -31,4 +31,5 @@ echo "Remaining tasks:"
 echo " * install terminator with vte3 support (for true colors)"
 echo " * install tmux with Tc support"
 echo " * install powerline fonts (https://github.com/powerline/fonts.git)"
-
+echo " * install cscope, python3-neovim"
+echo " * under neovim, type:   :UpdateRemotePlugins and restart nvim (just once)"
