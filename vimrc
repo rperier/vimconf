@@ -76,8 +76,8 @@ map <C-left>  :bprevious<CR>	"On utilise Ctrl-left pour aller au buffer précèd
 nnoremap K :Man <cword><CR>	"On utilise Shift-k pour lancer man sur le mot sous le curseur
 nnoremap <C-t> :NERDTreeToggle<CR>	"On utilise Ctrl-t pour toggle nerdtree sur la gauche
 nnoremap <C-f> :NERDTreeFind<CR>	"On utilise Ctrl-f pour affichier l'arbo du fichier courant dans nerdtree
-nnoremap <C-f> :NERDTreeFind<CR>	"On utilise Ctrl-f pour affichier l'arbo du fichier courant dans nerdtree
 nnoremap <C-e> :LanguageClientStart<CR>	"On utilise Ctrl-e pour Activer LanguageClient
+nnoremap <C-r> :Ag <cword> app <CR>
 
 " Code custom
 function! RunAsyncCommand(cmdline)
